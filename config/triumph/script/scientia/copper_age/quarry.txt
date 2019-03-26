@@ -6,11 +6,9 @@ setShowToast(true)
 addParent("scientia:copper_age/town_hall")
 setRequiresParents()
 
-setCompletedIconColor(51, 102, 204)
-setUncompletedTitleColor(153, 179, 230)
-setCompletedTitleColor(51, 102, 204)
+drawDirectLines(true)
 
-criteria = addCriteria("Tree Farm", "minecraft:inventory_changed")
+criteria = addCriteria("Quarry", "minecraft:inventory_changed")
 criteria.addItem(<ancientwarfareautomation:quarry>)
 
 setRewardExperience(25)

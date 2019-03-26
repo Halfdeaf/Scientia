@@ -36,6 +36,29 @@ import crafttweaker.item.IItemStack;
     <ore:logDebarked>.add(<hitwithaxe:debarked_tiger>);
     <ore:logDebarked>.add(<hitwithaxe:debarked_willow>);
 	<ore:logDebarked>.add(<hitwithaxe:debarked_ancient>);
+
+# Dynamic Tree Branches
+var dynamicBranches as IItemStack[] = [
+    <dynamictrees:oakbranch>,
+    <dynamictrees:oakbranchx>,
+    <dynamictrees:sprucebranch>,
+    <dynamictrees:sprucebranchx>,
+    <dynamictrees:birchbranch>,
+    <dynamictrees:junglebranch>,
+    <dynamictrees:acaciabranch>,
+    <dynamictrees:darkoakbranch>,
+    <dynamictrees:darkoakbranchx>,
+    <dttraverse:firbranch>,
+    <dttraverse:firbranchx>,
+    <rustic:olivebranch>,
+    <rustic:ironwoodbranch>,
+    <rustic:ironwoodbranchx>
+];
+
+for branch in dynamicBranches {
+    <ore:branchWood>.add(branch);
+}
+
 # Sign
     <ore:signWood>.add(<minecraft:sign>);
 
@@ -86,6 +109,17 @@ for woodtype in woodtypes {
     }
 }
 
+# cauldronStone
+    <ore:cauldronStone>.add(<morecauldrons:cobble_cauldron>);
+    <ore:cauldronStone>.add(<morecauldrons:brick_cauldron>);
+    <ore:cauldronStone>.add(<morecauldrons:stone_cauldron>);
+    <ore:cauldronStone>.add(<morecauldrons:granite_cauldron>);
+    <ore:cauldronStone>.add(<morecauldrons:smooth_granite_cauldron>);
+    <ore:cauldronStone>.add(<morecauldrons:diorite_cauldron>);
+    <ore:cauldronStone>.add(<morecauldrons:smooth_diorite_cauldron>);
+    <ore:cauldronStone>.add(<morecauldrons:andesite_cauldron>);
+    <ore:cauldronStone>.add(<morecauldrons:smooth_andesite_cauldron>);
+
 # dye
     <ore:dye>.add(<inspirations:dyed_bottle:*>);
 
@@ -105,3 +139,42 @@ for woodtype in woodtypes {
 	<ore:alfheimPortalFrame>.add(<botania:alfheimportal>);
 	<ore:alfheimPortalFrame>.add(<botania:livingwood:*>);
 	<ore:alfheimPortalFrame>.add(<botania:livingwood0wall>);
+
+# An oredict for all Artisan's Tools
+    <ore:artisansTool>.addAll(<ore:artisansCutters>);
+    <ore:artisansTool>.addAll(<ore:artisansHammer>);
+    <ore:artisansTool>.addAll(<ore:artisansFramingHammer>);
+    <ore:artisansTool>.addAll(<ore:artisansHandsaw>);
+    <ore:artisansTool>.addAll(<ore:artisansCuttingBoard>);
+    <ore:artisansTool>.addAll(<ore:artisansPan>);
+    <ore:artisansTool>.addAll(<ore:artisansDriver>);
+    <ore:artisansTool>.addAll(<ore:artisansSpanner>);
+    <ore:artisansTool>.addAll(<ore:artisansLens>);
+    <ore:artisansTool>.addAll(<ore:artisansSifter>);
+    <ore:artisansTool>.addAll(<ore:artisansCutter>);
+    <ore:artisansTool>.addAll(<ore:artisansPliers>);
+    <ore:artisansTool>.addAll(<ore:artisansAthame>);
+    <ore:artisansTool>.addAll(<ore:artisansGrimoire>);
+    <ore:artisansTool>.addAll(<ore:artisansChisel>);
+    <ore:artisansTool>.addAll(<ore:artisansCarver>);
+    <ore:artisansTool>.addAll(<ore:artisansRazor>);
+    <ore:artisansTool>.addAll(<ore:artisansQuill>);
+    <ore:artisansTool>.addAll(<ore:artisansNeedle>);
+    <ore:artisansTool>.addAll(<ore:artisansMortar>);
+    <ore:artisansTool>.addAll(<ore:artisansKnife>);
+
+# foodSoup
+    <ore:foodSoup>.add(<harvestcraft:pumpkinsoupitem>);
+    <ore:foodSoup>.add(<harvestcraft:carrotsoupitem>);
+    <ore:foodSoup>.add(<harvestcraft:potatosoupitem>);
+    <ore:foodSoup>.add(<harvestcraft:spidereyesoupitem>);
+    <ore:foodSoup>.add(<harvestcraft:tomatosoupitem>);
+    <ore:foodSoup>.add(<harvestcraft:beetsoupitem>);
+    <ore:foodSoup>.add(<harvestcraft:cactussoupitem>);
+    <ore:foodSoup>.add(<harvestcraft:seedsoupitem>);
+    <ore:foodSoup>.add(<harvestcraft:onionsoupitem>);
+
+# treeSapling
+    <ore:treeSapling>.add(<treetweaker:livingwood>);
+    <ore:treeSapling>.add(<naturesaura:ancient_sapling>);
+    <ore:treeSapling>.add(<treetweaker:dreamwood>);

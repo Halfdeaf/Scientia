@@ -1,0 +1,19 @@
+setIcon(<immersiveengineering:metal, meta:8>)
+setTitle("Industrial Age NYI")
+setDescription("")
+
+setShowToast(true)
+
+setBackground("minecraft:textures/blocks/iron_block.png")
+
+setAnnounceToChat(false)
+
+setFrameType("Goal")
+setCompletedIconColor(51, 102, 204)
+setUncompletedTitleColor(153, 179, 230)
+setCompletedTitleColor(51, 102, 204)
+
+criteria = addCriteria("Complete Bronze Age", "triumph:completed_advancement")
+criteria.setAdvancement("scientia:bronze_age/final")
+
+setRewardExperience(25)

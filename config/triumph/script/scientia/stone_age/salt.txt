@@ -7,12 +7,7 @@ addParent("scientia:stone_age/water_filter")
 setRequiresParents()
 
 setFrameType("Goal")
-setCompletedIconColor(51, 102, 204)
-setUncompletedTitleColor(153, 179, 230)
-setCompletedTitleColor(51, 102, 204)
-
-criteria = addCriteria("32 Salt", "minecraft:inventory_changed")
-criteria.addItem(<harvestcraft:saltitem>)
-criteria.setCount(32)
+criteria = addCriteria("Salt", "minecraft:inventory_changed")
+criteria.addItem(<ore:dustSalt>)
 
 setRewardExperience(25)

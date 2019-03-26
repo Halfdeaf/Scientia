@@ -7,8 +7,20 @@ import mods.ItemStages.addItemStage;
 var stage = stages.iron_age;
 val itemsToStage as IItemStack[] = [
 
-	<minecraft:cauldron>
+	<jaff:iron_fishing_rod>,
+	<jaff:golden_fishing_rod>,
+	<jaff:iron_hook>,
 	
+	<minecraft:cauldron>,
+	<minecraft:golden_carrot>,
+	<minecraft:golden_apple>,
+	<minecraft:golden_apple:1>,
+	
+	<rustic:chain>,
+	<rustic:chain_gold>,
+	
+	<watercan:watercan_iron>
+
 ];
 
 for item in itemsToStage {

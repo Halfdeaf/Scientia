@@ -8,12 +8,8 @@ setRequiresParents()
 
 drawDirectLines(true)
 
-setCompletedIconColor(51, 102, 204)
-setUncompletedTitleColor(153, 179, 230)
-setCompletedTitleColor(51, 102, 204)
-
 criteria = addCriteria("Any Backpack", "minecraft:inventory_changed")
 criteria.addItem(<backpack:backpack>)
 
 setRewardExperience(25)
-setPos(320,216)
+setPos(352,189)

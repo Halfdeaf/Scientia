@@ -10,19 +10,8 @@
         "action":"add",
         "CareerLevel":1,
         "buy":{
-          "id":"minecraft:planks",
-          "Damage":[
-            0,
-            1,
-            2,
-            3,
-            4,
-            5
-          ],
-          "Count":{
-            "min":12,
-            "max":36
-          }
+          "id":"tconstruct:pattern",
+          "Count":{"min":1,"max":4}
         },
         "sell":{
           "id":"gamestagebooks:novice_carpenter",
@@ -32,24 +21,30 @@
       {
         "action":"add",
         "CareerLevel":1,
-        "buy":{
-          "id":"minecraft:planks",
-          "Damage":[
-            0,
-            1,
-            2,
-            3,
-            4,
-            5
-          ],
-          "Count":{
-            "min":12,
-            "max":36
-          }
-        },
+        "buy":[
+          {"id":"bibliocraft:seat", "Damage": 3, "Count":1},
+          {"id":"bibliocraft:desk", "Damage": 2, "Count":1},
+          {"id":"bibliocraft:seatback5", "Damage": 5, "Count":1},
+          {"id":"rustic:table_jungle", "Count":1},
+          {"id":"rustic:table_olive", "Count":1}
+				],
         "sell":{
           "id":"minecraft:emerald",
-          "Count":1
+          "Count":{"min":2,"max":4}
+        }
+      },
+      {
+        "action":"add",
+        "CareerLevel":1,
+        "buy":[
+          {"id":"bibliocraft:shelf", "Damage": 4, "Count":2},
+          {"id":"bibliocraft:shelf", "Count":2},
+          {"id":"rustic:chair_spruce",  "Count":3},
+          {"id":"rustic:chair_ironwood", "Count":3}
+				],
+        "sell":{
+          "id":"minecraft:emerald",
+          "Count":{"min":2,"max":4}
         }
       }
     ]

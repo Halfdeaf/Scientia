@@ -1,23 +1,19 @@
 setIcon(<artisanworktables:artisans_hammer_stone>)
 setTitle("Tools of the Trade")
-setDescription("Worktable recipes often require a tool. Craft Stone versions of the Hammer, Framing Hammer and Handsaw.")
+setDescription("Worktable recipes often require a tool.\n\nCraft any kind of Hammer, Framing Hammer and Handsaw.")
 setShowToast(true)
 
 addParent("scientia:stone_age/string")
 setRequiresParents()
 
 setFrameType("Goal")
-setCompletedIconColor(51, 102, 204)
-setUncompletedTitleColor(153, 179, 230)
-setCompletedTitleColor(51, 102, 204)
+criteria = addCriteria("Any Artisan's Hammer", "minecraft:inventory_changed")
+criteria.addItem(<ore:artisansHammer>)
 
-criteria = addCriteria("Artisan's Stone Hammer", "minecraft:inventory_changed")
-criteria.addItem(<artisanworktables:artisans_hammer_stone>)
+criteria = addCriteria("Any Artisan's Framing Hammer", "minecraft:inventory_changed")
+criteria.addItem(<ore:artisansFramingHammer>)
 
-criteria = addCriteria("Artisan's Stone Framing Hammer", "minecraft:inventory_changed")
-criteria.addItem(<artisanworktables:artisans_framing_hammer_stone>)
-
-criteria = addCriteria("Artisan's Stone Handsaw", "minecraft:inventory_changed")
-criteria.addItem(<artisanworktables:artisans_handsaw_stone>)
+criteria = addCriteria("Any Artisan's Handsaw", "minecraft:inventory_changed")
+criteria.addItem(<ore:artisansHandsaw>)
 
 setRewardExperience(25)

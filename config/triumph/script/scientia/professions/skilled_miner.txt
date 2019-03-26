@@ -6,7 +6,6 @@ setShowToast(true)
 addParent("scientia:professions/apprentice_miner")
 setRequiresParents()
 
-
 setCompletedIconColor(51, 204, 51)
 setUncompletedTitleColor(153, 179, 230)
 setCompletedTitleColor(51, 204, 51)
@@ -24,9 +23,8 @@ criteria.setBlock(<ore:oreNickel>)
 criteria.setCount(8)
 
 criteria = addCriteria("Complete the Final Advancement of the Bronze Age", "triumph:completed_advancement")
-criteria.setAdvancement("triumph:bronze_age/final")
+criteria.setAdvancement("scientia:bronze_age/final")
 
 setRewardItem(<gamestagebooks:skilled_miner>)
 
 setRewardExperience(25)
-setPos(96,54)

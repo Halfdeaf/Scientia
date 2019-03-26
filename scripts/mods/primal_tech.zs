@@ -11,7 +11,7 @@ import mods.primaltech.WoodenBasin;
 	mods.primaltech.StoneAnvil.addRecipe(Itemstack output, IIngredient input);
 */
 var stoneAnvilRecipes as IItemStack[][] = [
-	[<primal_tech:charcoal_block>, <minecraft:coal:1> * 9],
+	[<minecraft:coal:1> * 9, <primal_tech:charcoal_block>],
 	[<minecraft:dye:15> * 9, <minecraft:bone_block>]
 ];
 
@@ -20,7 +20,7 @@ for item in stoneAnvilRecipes {
 }
 
 for bark in <ore:barkWood>.items {
-	StoneAnvil.addRecipe(<contenttweaker:tannin> * 2, bark);
+	StoneAnvil.addRecipe(<contenttweaker:tannin:0> * 2, bark);
 }
 
 for bone in <ore:bone>.items {

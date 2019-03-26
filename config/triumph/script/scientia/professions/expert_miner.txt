@@ -1,11 +1,10 @@
-setIcon(<contenttweaker:ore_diamond>)
+setIcon(<minecraft:diamond_ore>)
 setTitle("Expert Miner NYI")
 setDescription("Expert Mining gives you access to Diamond veins.")
 setShowToast(true)
 
 addParent("scientia:professions/skilled_miner")
 setRequiresParents()
-
 
 setCompletedIconColor(51, 204, 51)
 setUncompletedTitleColor(153, 179, 230)

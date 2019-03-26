@@ -1,6 +1,7 @@
 #priority 1
 
 import crafttweaker.item.IItemStack;
+import crafttweaker.liquid.ILiquidStack;
 import mods.ItemStages.addItemStage;
 
 import scripts.utility.disableItem;
@@ -278,15 +279,15 @@ val disableList = [
         <ancientwarfarestructure:construction_tool_lakes>,
         <ancientwarfarestructure:sound_block>,
         <ancientwarfarestructure:spawner_placer>,
-        //<ancientwarfarestructure:structure_builder>,
+        <ancientwarfarestructure:structure_builder>,
         <ancientwarfarestructure:structure_builder_ticked>,
         <ancientwarfarestructure:structure_builder_world_gen>,
         <ancientwarfarestructure:structure_scanner>,
-        //<ancientwarfarestructure:town_builder>,
+        <ancientwarfarestructure:town_builder>,
         <ancientwarfarestructure:structure_scanner_block>,
-        //<ancientwarfarestructure:advanced_loot_chest>,
+        <ancientwarfarestructure:advanced_loot_chest>,
         <ancientwarfarestructure:gate_proxy>,
-        //<ancientwarfarestructure:loot_chest_placer>,
+        <ancientwarfarestructure:loot_chest_placer>,
         <ancientwarfarestructure:advanced_spawner>.withTag({spawnerSettings: {minDelay: 200, spawnDelay: 400, lightSensitive: 0 as byte, spawnGroups: [{settingsList: [{remainingSpawnCount: -1, forced: 0 as byte, maxToSpawn: 4, entityId: "minecraft:pig", minToSpawn: 2}], groupWeight: 1}], playerRange: 16, respondToRedstone: 0 as byte, inventory: {Size: 9, Items: []}, spawnRange: 4, transparent: 0 as byte, maxDelay: 400, xpToDrop: 0, mobRange: 4, debugMode: 0 as byte, maxNearbyMonsters: 8}}),
         <ancientwarfarestructure:fire_pit>.withTag({lit: 0 as byte, variant: "default"}),
         <ancientwarfarestructure:fire_pit>.withTag({lit: 1 as byte, variant: "default"}),
@@ -930,6 +931,10 @@ val disableList = [
         <dynamictreesphc:tamarindseed>,
         <dynamictreesphc:vanillabeanseed>,
 
+        <forge:bucketfilled>.withTag({FluidName: "pigiron", Amount: 1000}),
+        <forge:bucketfilled>.withTag({FluidName: "knightslime", Amount: 1000}),
+
+        <harvestcraft:oystersauceitem>,
         <harvestcraft:cheesecakeitem>,
         <harvestcraft:cherrycheesecakeitem>,
         <harvestcraft:holidaycakeitem>,
@@ -1964,12 +1969,10 @@ val disableList = [
         <harvestcraft:taroseeditem>,
 
         <hooked:microcrafting>,
-
-        <forge:bucketfilled>.withTag({FluidName: "pigiron", Amount: 1000}),
-        <forge:bucketfilled>.withTag({FluidName: "knightslime", Amount: 1000}),
         
         <immersiveengineering:pickaxe_steel>,
 
+        <minecraft:fishing_rod>,
         <minecraft:beetroot_soup>,
         <minecraft:dye>,
         <minecraft:dye:1>,
@@ -2038,11 +2041,23 @@ val disableList = [
         <minecraft:tipped_arrow>.withTag({Potion: "minecraft:long_weakness"}),
         <minecraft:tipped_arrow>.withTag({Potion: "minecraft:luck"}),
 
+        <minecraft:tipped_arrow>.withTag({Potion: "quark:long_haste"}),
+        <minecraft:tipped_arrow>.withTag({Potion: "quark:strong_haste"}),
+        <minecraft:tipped_arrow>.withTag({Potion: "quark:mining_fatigue"}),
+        <minecraft:tipped_arrow>.withTag({Potion: "quark:long_mining_fatigue"}),
+        <minecraft:tipped_arrow>.withTag({Potion: "quark:strong_mining_fatigue"}),
+        <minecraft:tipped_arrow>.withTag({Potion: "quark:resistance"}),
+        <minecraft:tipped_arrow>.withTag({Potion: "quark:long_resistance"}),
+        <minecraft:tipped_arrow>.withTag({Potion: "quark:strong_resistance"}),
+        <minecraft:tipped_arrow>.withTag({Potion: "quark:danger_sight"}),
+        <minecraft:tipped_arrow>.withTag({Potion: "quark:long_danger_sight"}),
+
         <morecauldrons:glass_cauldron>,
         <morecauldrons:gold_cauldron>,
         <morecauldrons:diamond_cauldron>,
         <morecauldrons:obsidian_cauldron>,
 
+        <natura:materials:8>,
         <natura:bonemeal_bag>,
         <natura:overworld_seed_bags:1>,
         <natura:overworld_seed_bags>,
@@ -2071,6 +2086,7 @@ val disableList = [
         <natura:clouds:2>,
         <natura:clouds:3>,
 
+        <rustic:honey>,
         <rustic:fertile_soil>,
         <rustic:beeswax>,
         <rustic:honeycomb>,
@@ -2104,7 +2120,8 @@ val disableList = [
         <tconstruct:stone_ladder>,
         <tconstruct:stone_torch>,
         <tconstruct:stone_stick>,
-        
+        <tconstruct:fancy_frame:*>,
+
         <tconstruct:nuggets:4>,
         <tconstruct:ingots:4>,
         <tconstruct:metal:4>,
@@ -2119,10 +2136,6 @@ val disableList = [
         <tconstruct:firewood:1>,
         <tconstruct:firewood_slab>,
         <tconstruct:lavawood_stairs>,
-
-        <pickletweaks:reinforced_mesh>,
-        <pickletweaks:grass_mesh>,
-        <pickletweaks:grass_fiber>,
 
         <primal_tech:bone_axe>,
         <primal_tech:bone_pickaxe>,
@@ -2220,6 +2233,10 @@ val disableList = [
         <villagenames:fronosvillagebook>,
         <villagenames:nibiruvillagebook>,
         <villagenames:abandonedbasebook>,
+        
+        <watercan:watercan_wood>,
+        <watercan:watercan_gold>,
+        <watercan:watercan_diamond>,
 
         <waystones:return_scroll>,
         <waystones:bound_scroll>,
@@ -2227,11 +2244,31 @@ val disableList = [
 
     ] as IItemStack[];
 
+val liquidsToDisable as ILiquidStack[] = [
+
+    <liquid:pigiron>,
+    <liquid:knightslime>,
+    <liquid:honey>
+
+];
+
 for item in disableList {
     disableItem(item);
+}
+
+for liquid in liquidsToDisable {
+    mods.ItemStages.stageLiquid("disabled", liquid);
 }
 
 stageTinkersMaterial(stage, "endstone");
 stageTinkersMaterial(stage, "firewood");
 stageTinkersMaterial(stage, "pigiron");
 stageTinkersMaterial(stage, "knightslime");
+
+val jeiCategoriesToDisable as string[] = [
+	"minecraft.smelting"
+];
+
+for category in jeiCategoriesToDisable {
+	mods.jei.JEI.hideCategory(category);
+}

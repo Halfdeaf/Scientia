@@ -20,10 +20,16 @@ val removals as IItemStack[] = [
     <charset:chest>.withTag({}),
     <charset:barrel>.withTag({}),
     
+    <harvestcraft:flouritem>,
+    <harvestcraft:almondbutteritem>,
     <harvestcraft:saltitem>,
     <harvestcraft:waterfilter>,
     <harvestcraft:wovencottonitem>,
-
+    <harvestcraft:cheeseitem>,
+    <harvestcraft:butteritem>,
+    <harvestcraft:doughitem>,
+    
+    <minecraft:sugar>,
     <minecraft:dye:15>,
     <minecraft:flint>,
     <minecraft:lead>,
@@ -39,12 +45,10 @@ val removals as IItemStack[] = [
     <minecraft:dark_oak_boat>,
     <minecraft:book>,
     <minecraft:bone_block>,
-
+    <minecraft:coal:1>,
+    <minecraft:bread>,
+    
     <naturesaura:ancient_stick>,
-
-    <pickletweaks:grass_mesh>,
-    <pickletweaks:mesh>,
-	<pickletweaks:watering_can>,
     
     <rustic:cabinet>,
     <rustic:crop_stake>,
@@ -57,7 +61,8 @@ val removals as IItemStack[] = [
     <tconstruct:tooltables:*>,
     <tconstruct:rack:*>,
     <tconstruct:pattern>,
-
+    <tconstruct:soil>,
+    
     <waystones:waystone>
 
 ];
@@ -98,7 +103,8 @@ val oredictRemovals as IOreDictEntry[] = [
 val modRemovals as string[] = [
     "morecauldrons",
     "primal_tech",
-    "farmingforblockheads"
+    "farmingforblockheads",
+    "watercan"
 ];
 
 for item in removals {

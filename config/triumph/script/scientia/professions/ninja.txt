@@ -6,6 +6,7 @@ setShowToast(true)
 addParent("scientia:professions/expert_tinkerer")
 setRequiresParents()
 
+drawDirectLines(true)
 
 setCompletedIconColor(51, 204, 51)
 setUncompletedTitleColor(153, 179, 230)

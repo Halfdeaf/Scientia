@@ -1,0 +1,14 @@
+setIcon(<minecraft:stone>)
+setTitle("Final TODO")
+setDescription("")
+setShowToast(true)
+
+addParent("scientia:bronze_age/root")
+setRequiresParents()
+
+criteria = addCriteria("", "minecraft:inventory_changed")
+criteria.addItem(<minecraft:stone>)
+
+setRewardFunction("time_period:iron_age")
+
+setRewardExperience(25)
