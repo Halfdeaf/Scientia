@@ -6,6 +6,8 @@ import crafttweaker.oredict.IOreDictEntry;
 
 val removals as IItemStack[] = [
     
+    <ancientwarfarenpc:food_bundle>,
+    
     <backpack:backpack_piece:*>,
     <backpack:stick>,
     <backpack:backpack_frame>,
@@ -29,6 +31,7 @@ val removals as IItemStack[] = [
     <harvestcraft:butteritem>,
     <harvestcraft:doughitem>,
     
+    <minecraft:water_bucket>,
     <minecraft:sugar>,
     <minecraft:dye:15>,
     <minecraft:flint>,
